@@ -18,18 +18,63 @@ Exercício com Lista Simplesmente Encadeada (Linked List).
 
 ## Ferramentas de Desenvolvimento
 
-> A fazer.
+- **Compilador:** GCC/G++
+- **Debugger:** GDB
+- **Editor:** Visual Studio Code (opcional)
 
 ## Instalação
 
-> A fazer.
+1. Clone o repositório.
+2. Certifique-se de ter o `g++` e `gdb` instalados em seu sistema.
 
 # Execução
 
-## Fluxo de Execução
+## Compilação Manual
 
-> A fazer.
+Para compilar o projeto manualmente via terminal:
+
+```bash
+g++ main.cpp src/linked_list.cpp -Iinclude -o main
+./main
+```
+
+## Depuração (Debugging)
+
+### Via VSCode (Interface Gráfica)
+
+O projeto já está configurado com os arquivos `.vscode/tasks.json` e `.vscode/launch.json`.
+
+1.  Abra a pasta do projeto no VSCode.
+2.  Coloque breakpoints clicando na margem esquerda do código.
+3.  Pressione **F5** ou acesse a aba **Run and Debug** e clique em "Debug Linked List".
+4.  O VSCode irá compilar o projeto com símbolos de debug (`-g`) automaticamente antes de iniciar a sessão.
+
+### Via CLI (Terminal com GDB)
+
+1.  **Compilar com símbolos de debug:**
+    ```bash
+    g++ -g main.cpp src/linked_list.cpp -Iinclude -o main
+    ```
+
+2.  **Iniciar o GDB:**
+    ```bash
+    gdb ./main
+    ```
+
+3.  **Comandos básicos do GDB:**
+    - `break main`: Define um ponto de parada na função principal.
+    - `run` (ou `r`): Inicia a execução do programa.
+    - `next` (ou `n`): Executa a próxima linha de código.
+    - `step` (ou `s`): Entra em uma função.
+    - `print <variavel>` (ou `p`): Exibe o valor de uma variável.
+    - `continue` (ou `c`): Continua a execução até o próximo breakpoint.
+    - `quit` (ou `q`): Sai do GDB.
 
 ## Fluxo de Testes
 
-> A fazer.
+Para compilar e rodar os testes:
+
+```bash
+g++ tests/tests.cpp src/linked_list.cpp -Iinclude -o tests_bin
+./tests_bin
+```
