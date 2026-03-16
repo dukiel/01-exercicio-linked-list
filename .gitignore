@@ -1,7 +1,6 @@
 # Compiled object files
 *.o
 *.obj
-tests/tests
 
 # Executables
 *.exe
@@ -28,3 +27,9 @@ main
 /Debug/
 *.log
 *.swp
+
+# IDEs e Pastas do Projeto
+.vs/
+.vscode/
+out/
+tests/

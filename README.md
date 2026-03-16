@@ -1,94 +1,110 @@
 # 01 - Lista Simplesmente Encadeada (Linked List)
 
-## Descrição
+## Descricao
 Exercício com Lista Simplesmente Encadeada (Linked List).
+**Instituição:** Universidade do Vale do Itajaí (UNIVALI)
+**Curso:** Ciência da Computação
+**Aluno:** Daniel Luiz Cardoso
+**Professor:** Luiz Henrique Américo Salazar
+
 
 ## Funcionalidades
 - [x] Criação/Inicialização: criar uma lista vazia
+- [x] Mostrar lista: imprime os elementos da lista
+- [x] Lista Vazia: verifica se lista está vazia
+- [x] Número de Elementos: quantidade de elementos na lista
 - [x] Inserção: início da lista
-- [x] Liberar lista (destroi): Liberar a memória da lista
-- [ ] Mostrar lista: imprime os elementos da lista
-- [ ] Lista Vazia: verifica se lista está vazia
-- [ ] Número de Elementos: quantidade de elementos na lista
-- [ ] Inserção: posição específica
-- [ ] Remoção: elemento (node) de posição específica
-- [ ] Inversão: Inverter os elementos da lista
+- [x] Inserção: posição específica
+- [x] Remoção: elemento (node) de posição específica
+- [x] Inversão: Inverter os elementos da lista
+- [x] Destruição: Liberar a memória da lista
 
 ## Pré-requisitos
 
-## Ferramentas de Desenvolvimento
+- Sistema Operacional
+- CMake (pra usa no vs code)
+- Git
 
-- **Compilador:** GCC/G++
-- **Debugger:** GDB
-- **Editor:** Visual Studio Code (opcional)
+## Ferramentas de Desenvolvimento
+1. **Compilador C++:**
+    - Windows: gcc ou visual studio
+2. **Debugger:**
+    - Debugger nativo do VS
+3. **Editor:**
+    - Visual Studio Community 2026
 
 ## Instalação
 
-1. Clone o repositório.
-2. Certifique-se de ter o `g++` e `gdb` instalados em seu sistema.
+1. **Clone o repositório:**
+    `git clone https://github.com/dukiel/01-exercicio-linked-list.git>`
+
+2. **Build do projeto:**
+    - Windows (executando a partir de Windows):
+        ```
+        bash
+        mkdir build && cd build
+
+        # Gera os arquivos de build (usando MinGW)
+        cmake .. -G "MinGW Makefiles"
+
+        # Ou usando MSVC (se tiver Visual Studio instalado)
+        cmake .. -G "Visual Studio 17 2022"
+
+        # Compila
+        cmake --build .
+        ```
+    - VS 2026
+  
+        ```
+        mkdir build && cd build
+        
+        cmake .. -G "Visual Studio 18 2026"
+        
+        cmake --build .
+        ```
+
 
 # Execução
 
-## Compilação Manual
+- o fluxo de execuço principal e os testes foram unificados no mesmo arquivo para facilitr a validação.
 
-Para compilar o projeto manualmente via terminal:
+## Fluxo de Execução
 
-```bash
-g++ main.cpp src/linked_list.cpp -Iinclude -o main
-./main
-```
-
-## Depuração (Debugging)
-
-### Via VSCode (Interface Gráfica)
-
-O projeto já está configurado com os arquivos `.vscode/tasks.json` e `.vscode/launch.json`.
-
-1.  Abra a pasta do projeto no VSCode.
-2.  Coloque breakpoints clicando na margem esquerda do código.
-3.  Pressione **F5** ou acesse a aba **Run and Debug** e clique em "Debug Linked List".
-4.  O VSCode irá compilar o projeto com símbolos de debug (`-g`) automaticamente antes de iniciar a sessão.
-
-### Via CLI (Terminal com GDB)
-
-1.  **Compilar com símbolos de debug:**
-    ```bash
-    g++ -g main.cpp src/linked_list.cpp -Iinclude -o main
-    ```
-
-2.  **Iniciar o GDB:**
-    ```bash
-    gdb ./main
-    ```
-
-3.  **Comandos básicos do GDB:**
-    - `break main`: Define um ponto de parada na função principal.
-    - `run` (ou `r`): Inicia a execução do programa.
-    - `next` (ou `n`): Executa a próxima linha de código.
-    - `step` (ou `s`): Entra em uma função.
-    - `print <variavel>` (ou `p`): Exibe o valor de uma variável.
-    - `continue` (ou `c`): Continua a execução até o próximo breakpoint.
-    - `info breakpoints`: Lista todos os breakpoints.
-    - `quit` (ou `q`): Sai do GDB.
-
-4. **Fluxo de Exemplo**:
-
-    ```
-    (gdb) info breakpoints
-    (gdb) break main
-    (gdb) break criaLista()
-    (gdb) run
-    (gdb) next
-    (gdb) next
-    (gdb) print lista
-    (gdb) quit
-    ```
+- Apos buildar o projeto, executar via cli:
+    ```./build/Debug/linked_list.exe```
+    (NOTA: o caminho pode variar dependNdo do compilador.)
 
 ## Fluxo de Testes
 
-Para compilar e rodar os testes:
+- O cli irá mostrar algo como:
 
-```bash
-g++ tests/tests.cpp src/linked_list.cpp -Iinclude -o tests_bin
-./tests_bin
-```
+    ```
+    =========================================
+      INICIANDO TESTES DE LINKED LIST
+    =========================================
+
+    Testando criaLista()...
+    criaLista() passou em todos os testes
+    Testando mostraLista()...
+      Esperado: [ 10 20 30 ]
+      Obtido:   [ 10 20 30 ]
+    mostraLista() concluido!
+    Testando listaVazia()...
+    listaVazia() passou!
+    Testando tamanhoLista()...
+    tamanhoLista() passou!
+    Testando insere()...
+    insere() passou em todos os testes
+    Testando inserePosicao()...
+    inserePosicao() passou!
+    Testando removePosicao()...
+    removePosicao() passou!
+    Testando inverteLista()...
+    inverteLista() passou!
+    Testando destroiLista()...
+    destroiLista() passou em todos os testes
+
+    =========================================
+      TODOS OS TESTES PASSARAM COM SUCESSO!
+    =========================================
+    ```

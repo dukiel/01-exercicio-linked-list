@@ -1,3 +1,0 @@
-C:/Users/8337330/source/repos/01-exercicio-linked-list/out/build/x64-Debug/CMakeFiles/linked_list.dir
-C:/Users/8337330/source/repos/01-exercicio-linked-list/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/8337330/source/repos/01-exercicio-linked-list/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

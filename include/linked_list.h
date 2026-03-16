@@ -18,4 +18,8 @@ void mostraLista(ListaSimplesmenteEncadeada& lista);
 bool listaVazia(ListaSimplesmenteEncadeada& lista);
 int tamanhoLista(ListaSimplesmenteEncadeada& lista);
 
+void inserePosicao(ListaSimplesmenteEncadeada& lista, int conteudo, int posicao);
+void removePosicao(ListaSimplesmenteEncadeada& lista, int posicao);
+void inverteLista(ListaSimplesmenteEncadeada& lista);
+
 #endif // LINKED_LIST_H
