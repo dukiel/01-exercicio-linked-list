@@ -2,9 +2,13 @@
 
 ## Descricao
 Exercício com Lista Simplesmente Encadeada (Linked List).
+
 **Instituição:** Universidade do Vale do Itajaí (UNIVALI)
+
 **Curso:** Ciência da Computação
+
 **Aluno:** Daniel Luiz Cardoso
+
 **Professor:** Luiz Henrique Américo Salazar
 
 

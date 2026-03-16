@@ -30,6 +30,5 @@ main
 
 # IDEs e Pastas do Projeto
 .vs/
-.vscode/
 out/
 tests/
