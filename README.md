@@ -19,7 +19,7 @@ Exercício com Lista Simplesmente Encadeada (Linked List).
 - [x] Número de Elementos: quantidade de elementos na lista
 - [x] Inserção: início da lista
 - [x] Inserção: posição específica
-- [x] Remoção: elemento (node) de posição específica
+- [x] Remoção: elemento (node) d posição específica
 - [x] Inversão: Inverter os elementos da lista
 - [x] Destruição: Liberar a memória da lista
 
